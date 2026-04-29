@@ -206,8 +206,8 @@ nav.scrolled {
 .col-link:hover { background:var(--gold); color:var(--dark); }
 .col-grid { display:grid; grid-template-columns:1.55fr 1fr 1fr; grid-template-rows:auto auto; gap:3px; }
 .col-card { position:relative; overflow:hidden;  }
-.col-card:nth-child(1) { grid-row:span 2; min-height:620px; }
-.col-card:nth-child(n+2) { min-height:260px; aspect-ratio:unset; }
+.col-card:nth-child(1) { grid-row:span 2; min-height:580px; }
+.col-card:nth-child(n+2) { min-height:280px; }
 .card-bg { position:absolute; inset:0; transition:transform .9s cubic-bezier(.23,1,.32,1); }
 .col-card:hover .card-bg { transform:scale(1.05); }
 .bg-a { background:linear-gradient(145deg,rgba(10,8,3,.45),rgba(10,8,3,.2)),url('https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=900') center/cover no-repeat; }
@@ -221,7 +221,7 @@ nav.scrolled {
   position:absolute; inset:0;
   background:linear-gradient(to top,rgba(10,9,6,.9) 0%,rgba(10,9,6,.3) 50%,transparent 100%);
   display:flex; align-items:flex-end; padding:28px 24px;
-  opacity:.7; transition:opacity .4s ease;
+  opacity:1; transition:opacity .4s ease;
 }
 .col-card:hover .card-overlay { opacity:1; }
 .cc-tag { position:absolute; top:20px; left:20px; font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,168,76,.35); padding:5px 12px; background:rgba(10,9,6,.4); backdrop-filter:blur(4px); }
@@ -350,10 +350,7 @@ footer { background:#060503; border-top:1px solid var(--border); padding:64px; }
   <div class="hero-vignette"></div>
 
   <div class="hero-body">
-    <div class="hero-eyebrow">
-      <div class="eyebrow-bar"></div>
-      <span>Koleksioni 2025 — Tirana</span>
-    </div>
+
     <h1 class="hero-h1">
       Arti i<br>
       <em>hapësirës</em><br>
@@ -371,23 +368,33 @@ footer { background:#060503; border-top:1px solid var(--border); padding:64px; }
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div>
-      <span class="h-stat-num">15+</span>
-      <span class="h-stat-lbl">Vite Traditë</span>
-    </div>
-    <div class="h-divider"></div>
-    <div>
-      <span class="h-stat-num">800+</span>
-      <span class="h-stat-lbl">Projekte</span>
-    </div>
-  </div>
+
 
   <div class="scroll-ind">
     <div class="scroll-ind-line"></div>
     <div class="scroll-ind-lbl">Zbulo</div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div style="background:var(--dark2);padding:40px 48px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border-dim);">
+  <div style="text-align:center;padding:0 24px;border-right:1px solid var(--border-dim);">
+    <div style="font-size:36px;font-weight:200;color:var(--gold);line-height:1;">15+</div>
+    <div style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--cream-faint);margin-top:8px;">Vite Eksperiencë</div>
+  </div>
+  <div style="text-align:center;padding:0 24px;border-right:1px solid var(--border-dim);">
+    <div style="font-size:36px;font-weight:200;color:var(--gold);line-height:1;">800+</div>
+    <div style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--cream-faint);margin-top:8px;">Projekte të Realizuara</div>
+  </div>
+  <div style="text-align:center;padding:0 24px;border-right:1px solid var(--border-dim);">
+    <div style="font-size:36px;font-weight:200;color:var(--gold);line-height:1;">100%</div>
+    <div style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--cream-faint);margin-top:8px;">Kënaqësi Garantuar</div>
+  </div>
+  <div style="text-align:center;padding:0 24px;">
+    <div style="font-size:36px;font-weight:200;color:var(--gold);line-height:1;">5yr</div>
+    <div style="font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--cream-faint);margin-top:8px;">Garanci Produkti</div>
+  </div>
+</div>
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
@@ -550,6 +557,36 @@ footer { background:#060503; border-top:1px solid var(--border); padding:64px; }
     <div class="pillar-num">04</div>
     <div class="pillar-title">Shërbim i Plotë</div>
     <div class="pillar-body">Nga konsulenca e parë deri te montimi final — ekipi ynë është pranë jush në çdo hap të procesit.</div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<div style="background:var(--dark);padding:100px 48px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:6px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:14px;"><span style="display:block;width:28px;height:1px;background:var(--gold);flex-shrink:0;"></span>Shërbimet Tona</div>
+        <h2 style="font-size:clamp(32px,3vw,50px);font-weight:200;line-height:1.1;">Çdo gjë që nevojitet<br><strong style="font-weight:500;color:var(--gold-light);">nën një çati</strong></h2>
+      </div>
+      <p style="font-size:13px;font-weight:300;line-height:1.9;color:var(--cream-dim);max-width:320px;">Nga konsulenca fillestare deri te montimi final — SAVA ofron një eksperiencë të plotë dhe pa stres.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;">
+      <div style="background:var(--dark3);padding:48px 40px;border:1px solid var(--border-dim);transition:border-color .3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,.4)'" onmouseleave="this.style.borderColor='rgba(201,168,76,.09)'">
+        <div style="font-size:28px;margin-bottom:20px;">🏠</div>
+        <div style="font-size:16px;font-weight:400;color:var(--gold-light);margin-bottom:14px;">Konsulencë Dizajni</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.85;color:var(--cream-dim);">Takohemi me ju, kuptojmë stilin tuaj dhe krijojmë planin e hapësirës. Konsulenca e parë është plotësisht falas.</div>
+      </div>
+      <div style="background:var(--dark3);padding:48px 40px;border:1px solid var(--border-dim);transition:border-color .3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,.4)'" onmouseleave="this.style.borderColor='rgba(201,168,76,.09)'">
+        <div style="font-size:28px;margin-bottom:20px;">🪵</div>
+        <div style="font-size:16px;font-weight:400;color:var(--gold-light);margin-bottom:14px;">Prodhim me Porosi</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.85;color:var(--cream-dim);">Çdo mobilje prodhohet sipas matjeve tuaja. Dru masiv, lëkurë italiane, materiale premium — ju zgjidhni.</div>
+      </div>
+      <div style="background:var(--dark3);padding:48px 40px;border:1px solid var(--border-dim);transition:border-color .3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,.4)'" onmouseleave="this.style.borderColor='rgba(201,168,76,.09)'">
+        <div style="font-size:28px;margin-bottom:20px;">🚚</div>
+        <div style="font-size:16px;font-weight:400;color:var(--gold-light);margin-bottom:14px;">Dërgim & Montim Falas</div>
+        <div style="font-size:13px;font-weight:300;line-height:1.85;color:var(--cream-dim);">E dërgojmë dhe montojmë kudo në Shqipëri dhe Kosovë pa asnjë kosto shtesë. Shtëpinë e lëmë gati.</div>
+      </div>
+    </div>
   </div>
 </div>
 
